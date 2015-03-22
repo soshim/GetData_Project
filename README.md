@@ -16,4 +16,5 @@ In your R environment, execute the following command.
 source("run_analysis.R")
 ```
 Tidy data sets files data.txt and data2.txt will be created.
-For the detailed explanation, please refer to the Codebook.md file.
+For the detailed explanation, please refer to the
+[CodeBook.md](https://github.com/soshim/GetData_Project/blob/master/CodeBook.md) file.
