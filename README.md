@@ -1,7 +1,5 @@
----
-title: "Coursera Getting and Cleaning Data course project"
-output: html_document
----
+# GetData_Project
+Coursera Getting and Cleaning Data course project
 
 This document describes how run_analysis.R loads the data and creates the
 tidy dataset.
@@ -64,13 +62,7 @@ for (i in 1:nrow(activity_labels)) {
     activityName[data$activity == i] = as.character(activity_labels[i,2])
 }
 data <- cbind(activityName, data)
-```
 
-```
-## Error in data.frame(..., check.names = FALSE): arguments imply differing number of rows: 0, 10299
-```
-
-```r
 # Drop the original activity column
 data$activity <- NULL
 ```
@@ -120,13 +112,6 @@ I used aggregate fuction.
 ```r
 data2<-aggregate(data[,3:ncol(data)],
                  by=list(data$activityName, data$subject), FUN=mean)
-```
-
-```
-## Error in aggregate.data.frame(data[, 3:ncol(data)], by = list(data$activityName, : arguments must have same length
-```
-
-```r
 names(data2)[1:2] = c("activityName", "subject")
 ```
 
